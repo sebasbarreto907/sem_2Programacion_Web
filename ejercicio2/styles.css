@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 48px 20px;
+    background: #f3f6fb;
+    color: #1d2939;
+    font-family: Arial, sans-serif;
+}
+
+.pagina {
+    width: min(100%, 760px);
+    margin: 0 auto;
+}
+
+.encabezado {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.etiqueta {
+    margin: 0 0 10px;
+    color: #5268c9;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 0;
+    color: #172554;
+    font-size: clamp(28px, 5vw, 38px);
+}
+
+.introduccion {
+    margin: 12px 0 0;
+    color: #667085;
+    font-size: 16px;
+}
+
+.contenido {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.tarjeta {
+    padding: 24px;
+    border: 1px solid #e5eaf2;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(26, 44, 80, 0.06);
+}
+
+h2 {
+    margin: 0 0 8px;
+    color: #172554;
+    font-size: 20px;
+}
+
+.ayuda {
+    margin: 0 0 22px;
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+label {
+    display: block;
+    margin: 16px 0 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input,
+button {
+    width: 100%;
+    min-height: 44px;
+    border-radius: 8px;
+    font: inherit;
+}
+
+input {
+    padding: 10px 12px;
+    border: 1px solid #cfd7e6;
+    color: #1d2939;
+}
+
+input:focus {
+    border-color: #5268c9;
+    outline: 3px solid #e6eaff;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 14px;
+    border: 0;
+    background: #5268c9;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #4054b0;
+}
+
+.resultado {
+    min-height: 20px;
+    margin: 12px 0 0;
+    color: #b42318;
+    font-size: 14px;
+}
+
+.tabla-tarjeta table {
+    width: 100%;
+    margin-top: 12px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabla-tarjeta th,
+.tabla-tarjeta td {
+    padding: 11px 8px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.tabla-tarjeta th {
+    color: #667085;
+    font-size: 13px;
+}
+
+.tabla-tarjeta td {
+    font-size: 14px;
+}
+
+.pie {
+    margin-top: 22px;
+    color: #667085;
+    font-size: 13px;
+    text-align: center;
+}
+
+code {
+    color: #5268c9;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 32px 16px;
+    }
+
+    .contenido {
+        grid-template-columns: 1fr;
+    }
+}

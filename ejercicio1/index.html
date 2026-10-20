@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Clasificador de notas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="log.js" defer></script>
+</head>
+<body>
+    <main class="pagina">
+        <header class="encabezado">
+            <p class="etiqueta">EJERCICIO 1</p>
+            <h1>Clasificador de notas</h1>
+            <p class="introduccion">Ingresa una nota del 0 al 10 y descubre el resultado.</p>
+        </header>
+
+        <div class="contenido">
+            <section class="tarjeta practica" aria-labelledby="titulo-practica">
+                <h2 id="titulo-practica">Prueba tu nota</h2>
+                <p class="ayuda">Se aceptan valores decimales, por ejemplo 8.5.</p>
+                <form id="formulario-nota">
+                    <label for="nota">Tu nota</label>
+                    <div class="controles">
+                        <input id="nota" name="nota" type="number" min="0" max="10" step="any" placeholder="0 – 10" required>
+                        <button type="submit">Ver resultado</button>
+                    </div>
+                </form>
+                <p id="resultado" class="resultado" aria-live="polite"></p>
+            </section>
+
+            <section class="tarjeta" aria-labelledby="titulo-rangos">
+                <h2 id="titulo-rangos">Rangos de calificación</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Nota</th>
+                            <th scope="col">Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9 a 10</td>
+                            <td><span class="punto punto-verde"></span>Excelente</td>
+                        </tr>
+                        <tr>
+                            <td>7 a 8.99</td>
+                            <td><span class="punto punto-azul"></span>Aprobado</td>
+                        </tr>
+                        <tr>
+                            <td>5 a 6.99</td>
+                            <td><span class="punto punto-amarillo"></span>En recuperación</td>
+                        </tr>
+                        <tr>
+                            <td>0 a 4.99</td>
+                            <td><span class="punto punto-rojo"></span>Reprobado</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="nota-invalida">Las notas menores que 0 o mayores que 10 no son válidas.</p>
+            </section>
+        </div>
+
+    </main>
+</body>
+</html>

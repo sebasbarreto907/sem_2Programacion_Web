@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Tabla de multiplicar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="log.js" defer></script>
+</head>
+<body>
+    <main class="pagina">
+        <header class="encabezado">
+            <p class="etiqueta">EJERCICIO 2</p>
+            <h1>Tabla de multiplicar</h1>
+            <p class="introduccion">Elige un número y hasta qué multiplicación quieres llegar.</p>
+        </header>
+
+        <div class="contenido">
+            <section class="tarjeta practica" aria-labelledby="titulo-practica">
+                <h2 id="titulo-practica">Genera tu tabla</h2>
+                <p class="ayuda">El límite debe ser un número entero entre 1 y 20.</p>
+                <form id="formulario-tabla">
+                    <label for="numero">Número de la tabla</label>
+                    <input id="numero" name="numero" type="number" step="any" placeholder="Por ejemplo, 7" required>
+
+                    <label for="hasta">Generar hasta</label>
+                    <input id="hasta" name="hasta" type="number" min="1" max="20" step="1" placeholder="Máximo 20" required>
+
+                    <button type="submit">Generar tabla</button>
+                </form>
+                <p id="mensaje" class="resultado" aria-live="polite"></p>
+            </section>
+
+            <section class="tarjeta tabla-tarjeta" aria-labelledby="titulo-resultado">
+                <h2 id="titulo-resultado">Tu resultado</h2>
+                <div id="resultado" aria-live="polite"></div>
+            </section>
+        </div>
+
+    </main>
+</body>
+</html>

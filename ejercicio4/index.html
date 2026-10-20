@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 - Tarifa de parqueadero</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="log.js" defer></script>
+</head>
+<body>
+    <main class="pagina">
+        <header class="encabezado">
+            <p class="etiqueta">EJERCICIO 4</p>
+            <h1>Tarifa de parqueadero</h1>
+            <p class="introduccion">Calcula cuánto pagar según los minutos de parqueo.</p>
+        </header>
+
+        <div class="contenido">
+            <section class="tarjeta practica" aria-labelledby="titulo-calculo">
+                <h2 id="titulo-calculo">Calcula tu tarifa</h2>
+                <p class="ayuda">La primera hora cuesta $1.00 y cada hora adicional o fracción cuesta $0.50.</p>
+                <form id="formulario-parqueadero">
+                    <label for="minutos">Tiempo de parqueo en minutos</label>
+                    <input id="minutos" name="minutos" type="number" min="1" step="any" placeholder="Por ejemplo, 75" required>
+                    <button type="submit">Calcular tarifa</button>
+                </form>
+                <p id="mensaje" class="resultado" aria-live="polite"></p>
+            </section>
+
+            <section class="tarjeta resultado-tarjeta" aria-labelledby="titulo-resultado">
+                <h2 id="titulo-resultado">Tu resultado</h2>
+                <p id="resultado" class="valor-resultado" aria-live="polite">Aquí aparecerá la tarifa.</p>
+                <p id="detalle" class="detalle-resultado"></p>
+                <p class="nota-maximo">La tarifa máxima por día es de $5.00.</p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
